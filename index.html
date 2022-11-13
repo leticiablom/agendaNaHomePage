@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+      
+    <div class="container bloco1">
+        <div class="calendar">
+            <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                    <h1 id="tituloMes"></h1>
+                    <p onclick="Hoje()"></p>
+                </div>
+                <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+                <div>Dom</div>
+                <div>Seg</div>
+                <div>Ter</div>
+                <div>Qua</div>
+                <div>Qui</div>
+                <div>Sex</div>
+                <div>Sab</div>
+            </div>
+            <div class="days" id="days"></div>
+        </div>
+
+
+
+
+        <div class="tarefas" id="tarefas">
+
+            <div class="diaTarefa">
+                <i class="fas fa-angle-left prev" id="prevDia" onclick="funcPrevDia()"></i>
+                <div>
+                    <h1 id="diaTitulo"></h1>
+                    <h2 id="toDoHoje"></h2>
+                </div>
+                <i class="fas fa-angle-right next" id="nextDia" onclick="funcNextDia()"></i>
+            </div>
+
+            <div class="direita">
+                <button class="adicionar" id="adicionar" onclick=novaTarefa()>Nova Tarefa</button>
+            </div>
+
+
+            <div id="formDiv">
+                <form action="#" id="formulario" onsubmit="return false">
+
+                    <div class="form-group tarefaIn">
+                        <input class="form-field" type="nome" name="nome" id="nome" placeholder="Tarefa">
+                    </div>
+
+                    <div class="form-group tarefaIn">
+                        <input class="form-field" type="textarea" name="descricao" id="descricao"
+                            placeholder="Descrição"></textarea>
+                    </div>
+
+                    <div class="form-group tarefaIn">
+                        <input class="form-field" type="date" name="prazo" id="prazo" placeholder="Prazo:&nbsp">
+                    </div>
+
+                    <div class="form-group tarefaIn">
+
+                        <select type="input" name="cor" id="cor">
+                            <option label="branco" value="white"></option>
+                            <option label="verde" value="green"></option>
+                            <option label="azul" value="blue"></option>
+                            <option label="amarelo" value="yellow"></option>
+                            <option label="laranja" value="orange"></option>
+                            <option label="vermelho" value="red"></option>
+                        </select>
+                    </div>
+
+                    <!--<div class="form-group tarefaIn colorPal">
+                        <input class="form-field" type="color" name="color" id="color" placeholder="Cor">
+                    </div> 
+
+
+                    <div id="sliderDiv">
+                        <div class="form-group tarefaIn">
+                            <input type="range" class="form-range sliderBar" name="feito" id="feito" min="0" max="10"
+                                step="2.5" value="0" id="customRange3">
+                        </div>
+
+                        <input class="form-field op" type="etapas" name="etapas" id="etapas" placeholder="Nº de Etapas">
+                        <input class="form-field op" type="divisoes" name="divisoes" id="divisoes"
+                            placeholder="Divisões">
+                        <input class="form-field op" type="objetivo" name="objetivo" id="objetivo"
+                            placeholder="Objetivo">
+                    </div>-->
+
+
+
+
+
+
+                    <div class="direita">
+                        <button id="criar" class="criar" type="criar" name="criar" onclick=funcForm()
+                            onsubmit="return false">Criar</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <!--<div class="tarefa">
+
+                <h2 class="nome">Nome</h2>
+
+                <div class="descri">
+                    <h3 class="descricao">Descrição</h3>
+                </div>
+
+                <div class="prazoEfalta">
+                    <p class="prazo">Prazo: <b id="praz">xx/yy/zz</b></p>
+                    <p class="faltam">Faltam <b id="falt">X</b> dias</p>
+                </div>
+
+            </div>-->
+
+            <div id="tarefaBox">
+                
+            </div>
+            <br><br>
+            <div class="btnH">
+                <a href="homepage.html"><button type="button" class="btnHome btn-light btn-sm">Ir para página home</button></a>
+              </div>
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

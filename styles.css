@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@media (max-width: 500px) {
+
+    * {
+        overflow-x: hidden;
+        margin-left: 50px;
+        width: 490px;
+        margin: 0;
+        padding: 0;
+    }
+    .btnCalendario{
+      text-align:left;
+    }
+
+}
+/*------CONDIÇÕES GERAIS------*/
+body,
+ul,
+li,
+p,
+a {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+h1{
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: bold;
+}
+@media(max-width: 600px){
+  .header a{
+    display: none;
+  }
+}
+.agenda {
+  width: 700px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background: #56a1ed;
+  overflow: hidden;
+  box-shadow: 0 0 5px #555559;
+}
+.agenda dt {
+  background:#555559;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: light;
+  font-size: 20px;
+}
+.agenda dd {
+  margin: 0;
+  padding: 10px 15px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.agenda dd span {
+  position: absolute;
+}
+.agenda ul {
+  float: left;
+  margin: 0 0 0 50px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  border-left: 1px solid rgba(255,255,255,.4);
+}
+.agenda li {
+  border-bottom: 1px solid rgba(255,255,255,.4);
+  padding: 0 0 5px 10px;
+  margin-bottom: 5px;
+}
+.agenda li:last-child {
+  padding-bottom: 0;
+  margin: 0;
+  border: 0;
+}
+.agenda dd {
+  background: #56a1ed;
+}
+.btn{
+    background-color:  #555559 !important;
+    border: none !important;
+    color: #ffffff!important;
+    font-size: 15px !important;
+  }
+  .btn:hover{
+    background-color:  #56a1ed !important;
+  }
+
+.btnCalendario{
+  padding: 10px 15px;
+  text-align:end;
+  background-color: #56a1ed !important;
+  border: none !important;
+}
+
+/*#107181*/
