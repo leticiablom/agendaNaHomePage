@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @media (max-width: 500px) {
 
     * {
@@ -18,12 +18,15 @@ body,
 ul,
 li,
 p,
-a {
+a,
+dt,
+dd,
+h1 {
   margin: 0px;
   padding: 0px;
   list-style: none;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
 h1{
@@ -37,15 +40,15 @@ h1{
   }
 }
 .agenda {
-  width: 700px;
+  width: 500px;
   margin: 20px auto;
   border-radius: 10px;
-  background: #56a1ed;
+  background: #87ceeb;
   overflow: hidden;
-  box-shadow: 0 0 5px #555559;
+  box-shadow: 0 0 5px #6D6A75;
 }
 .agenda dt {
-  background:#555559;
+  background:#6D6A75;
   color: #ffffff;
   padding: 10px 15px;
   text-align: center;
@@ -81,23 +84,22 @@ h1{
   border: 0;
 }
 .agenda dd {
-  background: #56a1ed;
+  background: #87ceeb;
 }
 .btn{
-    background-color:  #555559 !important;
+    background-color: #6D6A75 !important;
     border: none !important;
     color: #ffffff!important;
     font-size: 15px !important;
   }
   .btn:hover{
-    background-color:  #56a1ed !important;
+    background-color: #87ceeb !important;
   }
 
 .btnCalendario{
   padding: 10px 15px;
   text-align:end;
-  background-color: #56a1ed !important;
+  background-color: #87ceeb !important;
   border: none !important;
 }
 
-/*#107181*/

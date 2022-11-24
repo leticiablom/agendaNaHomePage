@@ -1,21 +1,3 @@
-/*"tarefas": [
-    {
-      "nome": "estudar cálculo",
-      "dia": "13/12",
-      "prazo": "14/12/2022",
-      "faltam": "",
-      "descricao": "estudar para a prova de cálculo",
-      "color": "azul"
-    }
-  ]*/
-//script - leticia
-
-// teste 
-let listaTarefas = JSON.parse(localStorage.getItem("dbTasks"));
-for (let i = 0; i < listaTarefas.tarefas.length; i++) {
-
-console.log(JSON.parse(localStorage.getItem("dbTasks")).tarefas[i].dia);
-}
 
 // Define o título da parte de tarefas de acordo com o dia atual
 
@@ -35,6 +17,17 @@ const listaTarefasMock = {
     ]
   }
 
+  function dadosNulos(){
+    let strHtml = '';
+    if(localStorage.length == 0){
+    strHtml = ` <dd>
+                   <li>Você ainda não tem tarefas para hoje!</li>
+                </dd>`
+  }
+  document.getElementById('tela1').innerHTML = strHtml;
+}
+
+
 function imprimeTarefas(){
     let strHtml = '';
     let listaTarefas = JSON.parse(localStorage.getItem("dbTasks"));
@@ -42,19 +35,17 @@ function imprimeTarefas(){
     for (let i = 0; i < listaTarefas.tarefas.length; i++) {
         if((JSON.parse(localStorage.getItem("dbTasks")).tarefas[i].dia) == (dia + "/" + mes)){
         strHtml += ` <dd>
-                    <span>&#128151;</span>
                     <ul>
-                        <li>Nome da tarefa: ${listaTarefas.tarefas[i].nome}</li>
-                        <li>Dia: ${listaTarefas.tarefas[i].dia}</li> 
-                        <li>Prazo: ${listaTarefas.tarefas[i].prazo.split('-').reverse().join('/') }</li> 
-                        <li>Objetivo: ${listaTarefas.tarefas[i].descricao}</li>
-                        </ul> 
-                </dd>`//atualizar prazo
+                        <li><b>Nome da tarefa:</b> ${listaTarefas.tarefas[i].nome}</li>
+                        <li><b>Dia:</b> ${listaTarefas.tarefas[i].dia}</li>
+                        <li><b>Prazo:</b> ${listaTarefas.tarefas[i].prazo.split('-').reverse().join('/')}</li>
+                        <li><b>Objetivo:</b> ${listaTarefas.tarefas[i].descricao}</li>
+                    </ul> 
+                </dd>`
 } 
     }
-    document.getElementById('tela').innerHTML = strHtml;
+    document.getElementById('tela2').innerHTML = strHtml;
 }
 
-window.onload = function (){
-    imprimeTarefas();
-}
+window.onload = dadosNulos();
+window.onload = imprimeTarefas();
