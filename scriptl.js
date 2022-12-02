@@ -2,6 +2,7 @@
 // Define o título da parte de tarefas de acordo com o dia atual
 
 var dia = new Date().getDate();
+dia = ('0' + dia);
 var mes = new Date().getMonth() + 1;
 
 const listaTarefasMock = {
